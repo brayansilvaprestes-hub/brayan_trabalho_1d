@@ -1,0 +1,234 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  body { 
+    font-family: system-ui, Arial, sans-serif; 
+    background: #0B0F19; 
+    color: #F1F5F9; 
+    -webkit-font-smoothing: antialiased;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* A CAIXA ÚNICA DA APLICAÇÃO */
+  main { 
+    background: #1E293B; 
+    border: 1px solid #334155;
+    border-radius: 8px; /* Cantos sutis estilo caixa */
+    width: 100%;
+    max-width: 1000px; 
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* HEADER INTEGRADO À CAIXA */
+  header { 
+    background: #0F172A; 
+    color: #FFF; 
+    padding: 16px; 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 16px; 
+    align-items: center; 
+    justify-content: space-between;
+    border: 1px solid #334155;
+    border-radius: 6px;
+  }
+  
+  header h1 { 
+    font-size: 18px; 
+    font-weight: 700;
+  }
+  
+  nav a { 
+    color: #38BDF8; 
+    margin-left: 16px; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 14px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* TABELAS */
+  table { 
+    width: 100%; 
+    border-collapse: collapse;
+    background: #0F172A; 
+    border: 1px solid #334155;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  th, td { 
+    padding: 12px; 
+    border-bottom: 1px solid #334155; 
+    text-align: left; 
+    font-size: 14px;
+  }
+  
+  th { 
+    background: #151F32; 
+    color: #94A3B8;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  tr:hover td {
+    background-color: #1E293B;
+  }
+  
+  /* BOTÕES E FORMULÁRIOS */
+  .acoes { 
+    display: flex; 
+    gap: 8px; 
+    align-items: center; 
+  }
+  
+  .acoes form { 
+    margin: 0; 
+  }
+  
+  button { 
+    background: #0284C7; 
+    color: #FFF; 
+    border: 0; 
+    border-radius: 6px; 
+    padding: 8px 14px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    font-size: 14px;
+  }
+  
+  button:hover {
+    background: #0369A1;
+  }
+  
+  button.perigo { 
+    background: #EF4444; 
+  }
+  
+  button.perigo:hover {
+    background: #DC2626;
+  }
+  
+  a { 
+    color: #38BDF8; 
+    text-decoration: none;
+  }
+  
+  /* INPUTS DE BUSCA */
+  input, select { 
+    padding: 8px 12px; 
+    border: 1px solid #475569; 
+    border-radius: 6px; 
+    font: inherit; 
+    font-size: 14px;
+    color: #F1F5F9;
+    background: #0F172A;
+    outline: none;
+  }
+  
+  input:focus, select:focus {
+    border-color: #38BDF8;
+  }
+  
+  .busca, .linha { 
+    display: flex; 
+    gap: 12px; 
+    flex-wrap: wrap; 
+    width: 100%;
+  }
+  
+  .busca input { 
+    flex: 1; 
+    min-width: 200px; 
+  }
+  
+  /* CADA LIVRO ADAPTADO LADO A LADO COMO COMPARTIMENTOS DA CAIXA */
+  .ficha { 
+    background: #0F172A; 
+    padding: 16px; 
+    border-radius: 6px; 
+    border: 1px solid #334155;
+    display: flex; 
+    flex-direction: column;
+    gap: 8px; 
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    vertical-align: top;
+  }
+  
+  @media (min-width: 600px) {
+    .ficha {
+      display: inline-flex;
+      width: calc(33.333% - 8px);
+      margin-right: 12px;
+    }
+    .ficha:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+  
+  @media (max-width: 599px) {
+    .ficha {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  
+  .ficha label { 
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font-weight: 600; 
+    font-size: 12px;
+    color: #94A3B8; 
+    border-bottom: 1px dashed #1E293B;
+    padding-bottom: 4px;
+  }
+  
+  .ficha label span, 
+  .ficha label strong {
+    color: #F1F5F9;
+    font-weight: 400;
+  }
+  
+  /* ALERTAS E TOTAIS */
+  .aviso { 
+    background: #064E3B; 
+    border: 1px solid #065F46; 
+    color: #A7F3D0;
+    padding: 12px; 
+    border-radius: 6px; 
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .total { 
+    color: #94A3B8; 
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  footer { 
+    text-align: center; 
+    color: #475569; 
+    padding-top: 16px; 
+    font-size: 13px; 
+    border-top: 1px solid #334155;
+  }
+  
